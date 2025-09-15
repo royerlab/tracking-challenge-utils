@@ -8,6 +8,7 @@ version = "0.1.0"
 description = "Utilities for the whole embryo tracking challenge"
 readme = "README.md"
 requires-python = ">=3.11"
+license = "BSD-3-Clause"
 dependencies = [
     "napari[pyqt5]>=0.6.4",
     "spatial-graph>=0.0.5",
