@@ -1,7 +1,7 @@
 
 ```mermaid
 graph TD
-    subgraph Predicted Graph (Gp)
+    subgraph PG ["Predicted Graph (Gp)"]
         x-->a
         a-->z
         a-->b
@@ -11,24 +11,25 @@ graph TD
         e
     end
 
-    subgraph Ground-truth Graph (Ggt)
+    subgraph GT ["Ground-truth Graph (Ggt)"]
         a_gt-->b_gt
         b_gt-->c
         b_gt-->d_gt
         c
     end
 
-    style x fill:#fff,stroke:#333,stroke-width:2px,shape:rect
-    style z fill:#fff,stroke:#333,stroke-width:2px,shape:rect
-    style a fill:#fff,stroke:#333,stroke-width:2px,shape:rect
-    style b fill:#fff,stroke:#333,stroke-width:2px,shape:rect
-    style e fill:#fff,stroke:#333,stroke-width:2px,shape:rect
-    style d fill:#fff,stroke:#333,stroke-width:2px,shape:rect
+    style x fill:#fff,stroke:#333,stroke-width:2px
+    style z fill:#fff,stroke:#333,stroke-width:2px
+    style a fill:#fff,stroke:#333,stroke-width:2px
+    style b fill:#fff,stroke:#333,stroke-width:2px
+    style e fill:#fff,stroke:#333,stroke-width:2px
+    style d fill:#fff,stroke:#333,stroke-width:2px
 
-    style a_gt fill:#fff,stroke:#333,stroke-width:2px,shape:circle
-    style b_gt fill:#fff,stroke:#333,stroke-width:2px,shape:circle
-    style c fill:#fff,stroke:#333,stroke-width:2px,shape:circle
-    style d_gt fill:#fff,stroke:#333,stroke-width:2px,shape:circle
+    style a_gt fill:#fff,stroke:#333,stroke-width:2px
+    style b_gt fill:#fff,stroke:#333,stroke-width:2px
+    style c fill:#fff,stroke:#333,stroke-width:2px
+    style d_gt fill:#fff,stroke:#333,stroke-width:2px
+```
 # Evaluation Metrics
 
 ## Main Metric Definitions:
