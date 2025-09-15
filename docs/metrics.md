@@ -2,20 +2,19 @@
 ```mermaid
 graph TD
     subgraph PG ["Predicted Graph (Gp)"]
-        x-->a
-        a-->z
-        a-->b
-        b-->e
-        b-->d
-        z
-        e
+        direction TB
+        x --> a
+        a --> z
+        a --> b
+        b --> e
+        b --> d
     end
 
     subgraph GT ["Ground-truth Graph (Ggt)"]
-        a_gt-->b_gt
-        b_gt-->c
-        b_gt-->d_gt
-        c
+        direction TB
+        a_gt --> b_gt
+        b_gt --> c
+        b_gt --> d_gt
     end
 
     style x fill:#fff,stroke:#333,stroke-width:2px
