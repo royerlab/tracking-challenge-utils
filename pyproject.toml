@@ -1,0 +1,15 @@
+[project]
+name = "tracking-challenge-utils"
+version = "0.1.0"
+description = "Utilities for the whole embryo tracking challenge"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "napari[pyqt5]>=0.6.4",
+    "spatial-graph>=0.0.5",
+    "tracksdata",
+    "zarr>=3.0.10",
+]
+
+[tool.uv.sources]
+tracksdata = { git = "https://github.com/royerlab/tracksdata.git", rev = "791bb3b617434a1dc4242c3fd75a4b76fd84758c" }
