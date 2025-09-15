@@ -80,7 +80,15 @@ def main() -> None:
 
     # adding candidate cells to the viewer
     viewer.add_points(
-        coords, ndim=4, size=10, opacity=1.0, face_color="transparent", border_color="red", name="Candidate cells"
+        coords,
+        ndim=4,
+        size=10,
+        opacity=1.0,
+        face_color="transparent",
+        border_color="red",
+        name="Candidate cells",
+        scale=ds.scale,
+        visible=False,
     )
 
     # connected nodes between adjacent frames using distance
@@ -108,16 +116,52 @@ def main() -> None:
         opacity=1.0,
         name="Solution tracks",
         scale=ds.scale,
+        visible=False,
+        blending="translucent",
     )
 
     # masks are required for metrics computation
-    td.nodes.MaskDiskAttrs(radius=10, image_shape=ds.image.shape[1:]).add_node_attrs(solution_graph)
+    td.nodes.MaskDiskAttrs(radius=5, image_shape=ds.image.shape[1:]).add_node_attrs(solution_graph)
 
-    td.nodes.MaskDiskAttrs(radius=10, image_shape=ds.image.shape[1:]).add_node_attrs(ds.tracks)
+    td.nodes.MaskDiskAttrs(radius=5, image_shape=ds.image.shape[1:]).add_node_attrs(ds.tracks)
 
     # computing metrics
     metrics = evaluate(solution_graph, ds.tracks, metric="jaccard")
     print(f"Final score: {metrics:.4f}")
+
+    # adding ground truth tracks for reference
+    gt_tracklets, gt_tracklets_graph = ds.napari_tracks()
+
+    viewer.add_tracks(
+        gt_tracklets,
+        graph=gt_tracklets_graph,
+        tail_width=5,
+        tail_length=100,
+        opacity=1.0,
+        name="Ground truth tracks",
+        scale=ds.scale,
+        blending="translucent",
+        colormap="hsv",
+    )
+
+    # querying matched tracks
+    matched_sol_graph = solution_graph.filter(td.NodeAttr(td.DEFAULT_ATTR_KEYS.MATCHED_NODE_ID) >= 0).subgraph()
+
+    matched_tracklets, matched_tracklets_graph = td.functional.to_napari_format(
+        graph=matched_sol_graph,
+        shape=ds.image.shape,
+    )
+
+    viewer.add_tracks(
+        matched_tracklets,
+        graph=matched_tracklets_graph,
+        tail_width=5,
+        tail_length=100,
+        opacity=1.0,
+        name="Matched solution tracks",
+        scale=ds.scale,
+        blending="translucent",
+    )
 
     napari.run()
 

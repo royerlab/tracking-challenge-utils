@@ -2874,15 +2874,15 @@ requires-dist = [
     { name = "napari", extras = ["pyqt5"], specifier = ">=0.6.4" },
     { name = "pytest", marker = "extra == 'dev'" },
     { name = "spatial-graph", specifier = ">=0.0.5" },
-    { name = "tracksdata", git = "https://github.com/royerlab/tracksdata.git?rev=791bb3b617434a1dc4242c3fd75a4b76fd84758c" },
+    { name = "tracksdata", git = "https://github.com/royerlab/tracksdata.git?rev=87b92276bb93d5655350997c11bca1a1cf7d3f09" },
     { name = "zarr", specifier = ">=3.0.10" },
 ]
 provides-extras = ["dev"]
 
 [[package]]
 name = "tracksdata"
-version = "0.1.dev591+g791bb3b61"
-source = { git = "https://github.com/royerlab/tracksdata.git?rev=791bb3b617434a1dc4242c3fd75a4b76fd84758c#791bb3b617434a1dc4242c3fd75a4b76fd84758c" }
+version = "0.1.dev592+g87b92276b"
+source = { git = "https://github.com/royerlab/tracksdata.git?rev=87b92276bb93d5655350997c11bca1a1cf7d3f09#87b92276bb93d5655350997c11bca1a1cf7d3f09" }
 dependencies = [
     { name = "bidict" },
     { name = "blosc2" },

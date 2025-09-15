@@ -22,7 +22,7 @@ dev = [
 ]
 
 [tool.uv.sources]
-tracksdata = { git = "https://github.com/royerlab/tracksdata.git", rev = "791bb3b617434a1dc4242c3fd75a4b76fd84758c" }
+tracksdata = { git = "https://github.com/royerlab/tracksdata.git", rev = "87b92276bb93d5655350997c11bca1a1cf7d3f09" }
 
 # https://docs.astral.sh/ruff
 [tool.ruff]
