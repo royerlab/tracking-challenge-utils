@@ -12,7 +12,7 @@ license = "BSD-3-Clause"
 dependencies = [
     "napari[pyqt5]>=0.6.4",
     "spatial-graph>=0.0.5",
-    "tracksdata",
+    "tracksdata>=0.1.0rc0",
     "zarr>=3.0.10",
 ]
 
@@ -20,9 +20,6 @@ dependencies = [
 dev = [
     "pytest",
 ]
-
-[tool.uv.sources]
-tracksdata = { git = "https://github.com/royerlab/tracksdata.git", rev = "87b92276bb93d5655350997c11bca1a1cf7d3f09" }
 
 # https://docs.astral.sh/ruff
 [tool.ruff]

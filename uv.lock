@@ -609,15 +609,34 @@ wheels = [
 
 [[package]]
 name = "geff"
-version = "0.5.1.dev5+gb751718"
-source = { git = "https://github.com/live-image-tracking-tools/geff.git?rev=b751718f81d107e1fdda2df2afb62253039c137b#b751718f81d107e1fdda2df2afb62253039c137b" }
+version = "1.0.0.1.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "geff-spec" },
     { name = "networkx" },
     { name = "numcodecs" },
     { name = "numpy" },
     { name = "pydantic" },
     { name = "typer" },
     { name = "zarr" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/03/c6/0165abebd9349f5f09c1d6ce462232ae5f0dd6c39e7ff27fb1a612bd80f9/geff-1.0.0.1.0.tar.gz", hash = "sha256:813f3405dbcf0867e66d52b08f94bdf7422681fc9e7cbbe1f6e70f66e7ac32e1", size = 123458, upload-time = "2025-09-24T17:40:12.141Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/29/c3/ba9e4d358fcb2b330fe3db706c2c3179ec991cc7ee00d55cad27c302aa88/geff-1.0.0.1.0-py3-none-any.whl", hash = "sha256:d95ac36c731682b5fb7162832e3061fa28a04de2c00b0e45d53e23dba76257bb", size = 59921, upload-time = "2025-09-24T17:40:10.749Z" },
+]
+
+[[package]]
+name = "geff-spec"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "annotated-types" },
+    { name = "numpy" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5d/97/1f1ece703a2d83b8ed7f89bcecd41c71c806db5920ced4dd2e2c392c34dc/geff_spec-1.0.0.tar.gz", hash = "sha256:b1360e81c719f062b8887b418987e8dfd578ff73833bd394f0d97ad0751316da", size = 18252, upload-time = "2025-09-24T16:03:28.323Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6b/4c/092fb4342578277f55a5b250399cf7686da5fec9acff5ac8ad6d5ede030c/geff_spec-1.0.0-py3-none-any.whl", hash = "sha256:b44f56aaa43fd280adec29c30d531159287f1f37a21d9a62cc64ff4a0b81f3e6", size = 13600, upload-time = "2025-09-24T16:03:27.173Z" },
 ]
 
 [[package]]
@@ -2874,15 +2893,15 @@ requires-dist = [
     { name = "napari", extras = ["pyqt5"], specifier = ">=0.6.4" },
     { name = "pytest", marker = "extra == 'dev'" },
     { name = "spatial-graph", specifier = ">=0.0.5" },
-    { name = "tracksdata", git = "https://github.com/royerlab/tracksdata.git?rev=87b92276bb93d5655350997c11bca1a1cf7d3f09" },
+    { name = "tracksdata", specifier = ">=0.1.0rc0" },
     { name = "zarr", specifier = ">=3.0.10" },
 ]
 provides-extras = ["dev"]
 
 [[package]]
 name = "tracksdata"
-version = "0.1.dev592+g87b92276b"
-source = { git = "https://github.com/royerlab/tracksdata.git?rev=87b92276bb93d5655350997c11bca1a1cf7d3f09#87b92276bb93d5655350997c11bca1a1cf7d3f09" }
+version = "0.1.0rc0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "bidict" },
     { name = "blosc2" },
@@ -2900,6 +2919,10 @@ dependencies = [
     { name = "sqlalchemy" },
     { name = "tqdm" },
     { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/db/83/47d218cb8fdf78b4defd7eca2b957548ee6ca1d214fcf97e81eaf91f2c96/tracksdata-0.1.0rc0.tar.gz", hash = "sha256:106968bbe4abeaaa996062d34335ea409e9d445198bbe4e904e6e11d31db71ce", size = 153256, upload-time = "2025-09-25T14:58:15.793Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/96/ae/ffe3d7d993e001a872696ba3f6133fd79eeb8734d42de85e3b804583315c/tracksdata-0.1.0rc0-py3-none-any.whl", hash = "sha256:6cb0bc4b8adf3bc6c1267a7b65e15fcf0af188f48f3ddac508af7e046ae06622", size = 177905, upload-time = "2025-09-25T14:58:13.793Z" },
 ]
 
 [[package]]
