@@ -36,6 +36,8 @@ This example:
 
 ### Naive Tracking Pipeline
 
+IMPORTANT: This is a proof of concept but not a competitive baseline for the challenge.
+
 Run a complete cell detection and tracking pipeline:
 
 ```bash
